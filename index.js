@@ -1,6 +1,7 @@
-import Wheel from 'wheel-of-balance/js';
+    import Wheel from 'spin-lib-wheel-of-balance/js';
+    import chroma from 'chroma-js';
 
- var config = {};
+    var config = {};
 
     config.radius = 200;
     config.levels = 10;
@@ -8,7 +9,6 @@ import Wheel from 'wheel-of-balance/js';
 
     // Function to update the config based on user input
     function updateConfig() {
-        console.log("asd");
         const numSections = document.getElementById("numSections").value;
         const sectionNames = document.getElementById("sectionNames").value.split("\n");
 

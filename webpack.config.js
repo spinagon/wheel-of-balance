@@ -9,7 +9,6 @@ module.exports = {
   mode: 'development',
   devServer: {
     static: './',
-    hot: true,
-    open: true
+    hot: false,
   },
 };
