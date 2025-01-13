@@ -20,7 +20,7 @@ import Wheel from 'wheel-of-balance/js';
         for (let i = 0; i < numSections; i++) {
             var level = data ? data[Math.min(i, Object.keys(data).length - 1)].level : config.levels;
             config.segments.push({
-                color: getContrastColor(i, numSections), // Random color for each section
+                color: getContrastColor(i, numSections),
                 text: sectionNames[i] || `Section ${i + 1}`, // Use provided name or default
                 level: level
             });
