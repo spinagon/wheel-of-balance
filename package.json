@@ -1,0 +1,15 @@
+{
+  "name": "wheel_of_balance",
+  "version": "1.0.0",
+  "description": "Draw a wheel of balance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chroma-js": "^3.1.2",
+    "wheel-of-balance": "^0.9.1"
+  }
+}
