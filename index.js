@@ -8,16 +8,21 @@ import Wheel from 'wheel-of-balance/js';
 
     // Function to update the config based on user input
     function updateConfig() {
+        console.log("asd");
         const numSections = document.getElementById("numSections").value;
-        const sectionNames = document.getElementById("sectionNames").value.split(",");
+        const sectionNames = document.getElementById("sectionNames").value.split("\n");
 
         config.segments = [];
 
+        var data;
+        try {data = wheel.data;} catch {}
+
         for (let i = 0; i < numSections; i++) {
+            var level = data ? data[Math.min(i, Object.keys(data).length - 1)].level : config.levels;
             config.segments.push({
                 color: getContrastColor(i, numSections), // Random color for each section
                 text: sectionNames[i] || `Section ${i + 1}`, // Use provided name or default
-                level: config.levels
+                level: level
             });
         }
 
@@ -55,5 +60,10 @@ import Wheel from 'wheel-of-balance/js';
 
     const numSections = document.getElementById("numSections");
     numSections.addEventListener('change', function (e) {
+        updateConfig();
+    });
+
+    const sectionNames = document.getElementById("sectionNames");
+    sectionNames.addEventListener('input', function (e) {
         updateConfig();
     });

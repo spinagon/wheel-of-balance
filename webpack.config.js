@@ -8,6 +8,8 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    static: './dist', // Serve files from the dist folder
+    static: './',
+    hot: true,
+    open: true
   },
 };
